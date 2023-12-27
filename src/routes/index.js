@@ -12,11 +12,9 @@ const Drawer = createDrawerNavigator();
 export default function Routes() {
   return (
     <Drawer.Navigator>
-
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Publicidade" component={Publicidade} />
       <Drawer.Screen name="Contato" component={Contato} />
-
     </Drawer.Navigator>
   )
 }

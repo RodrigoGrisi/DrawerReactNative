@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
+import CustomDrawer from "../components/CustomDrawer";
 
 import Home from '../pages/Home'
 import Publicidade from '../pages/Publicidade'
@@ -12,19 +12,19 @@ const Drawer = createDrawerNavigator();
 export default function Routes() {
   return (
     <Drawer.Navigator
+      drawerContent={CustomDrawer}
       screenOptions={{
-        drawerStyle:{
-          backgroundColor: '#121212'
+        drawerStyle: {
         },
-        drawerActiveBackgroundColor: '#3b3dbf',
+        drawerActiveBackgroundColor: '#00dae4',
         drawerActiveTintColor: '#fff',
-        drawerInactiveBackgroundColor: '#ccc',
+        drawerInactiveBackgroundColor: '#f1f1f1',
         drawerInactiveTintColor: '#000'
       }}
     >
-      <Drawer.Screen name="Home" component={Home} 
+      <Drawer.Screen name="Home" component={Home}
         options={{
-          title: 'Inicio'
+          title: 'Inicio',
         }}
       />
       <Drawer.Screen name="Publicidade" component={Publicidade} />

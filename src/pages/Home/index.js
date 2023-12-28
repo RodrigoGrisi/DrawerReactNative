@@ -11,7 +11,10 @@ export default function Home() {
   <Text> Página Inicial - Deu certo</Text>
 
   <Button title='Abrir Drawer'
-    onPress={()=> navigation.openDrawer()}
+    onPress={()=> {
+      navigation.openDrawer()
+      console.log("Abriu o menu")
+      }}
   />
     </View>
   );

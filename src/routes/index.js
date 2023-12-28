@@ -11,8 +11,22 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={Home} />
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle:{
+          backgroundColor: '#121212'
+        },
+        drawerActiveBackgroundColor: '#3b3dbf',
+        drawerActiveTintColor: '#fff',
+        drawerInactiveBackgroundColor: '#ccc',
+        drawerInactiveTintColor: '#000'
+      }}
+    >
+      <Drawer.Screen name="Home" component={Home} 
+        options={{
+          title: 'Inicio'
+        }}
+      />
       <Drawer.Screen name="Publicidade" component={Publicidade} />
       <Drawer.Screen name="Contato" component={Contato} />
     </Drawer.Navigator>
